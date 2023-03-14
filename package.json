@@ -1,0 +1,11 @@
+{
+  "name": "oc_projet03",
+  "version": "1.0.0",
+  "description": "P3 MyFood",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+  },
+  "author": "Eric Bouillaut",
+  "license": "ISC"
+}
