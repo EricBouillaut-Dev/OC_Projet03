@@ -1,0 +1,49 @@
+@media (min-width: $tablette) {
+    main{
+        .menu{
+            h2{
+                text-align: center;
+            }
+            ol {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 1.5rem;
+                padding: 0 2rem 0 1.8rem;
+                justify-content: space-evenly;
+                align-items: flex-start;
+            }
+        
+    
+        }
+        .restaurants {
+            padding: 0 0 2rem 0;
+            h2{
+                text-align: center;
+            }
+            article{
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                .card{
+                    a{
+                        img{
+                            max-height: 250px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+    footer{
+        padding: 1rem 0 2rem 0;
+        h1{
+            font-size: 2rem;
+            text-align: center;
+        }
+        .footer-text{
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+    }
+}

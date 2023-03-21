@@ -1,0 +1,58 @@
+@mixin flex-center {
+    display: flex;
+    justify-content: center;
+}
+@mixin btn-style() {                
+   
+        @include flex-center;
+        flex-wrap: wrap;
+        width: 100%;
+        background-color: $graywhite;
+        label {
+            @include flex-center;
+            color: white;
+            border-radius: 2rem;
+            font-size: 1rem;
+            background: linear-gradient($secondary, $primary);
+            padding: 0.8rem 1.5rem 0.8rem 1.5rem;
+            margin: 2rem 0 3rem 0;
+            box-shadow: 0 3px 10px $darkgray;
+            transition: 100ms;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.02);
+                box-shadow: 0 3px 10px $secondary;
+                transition: 0.5s;
+            }
+        }
+    
+}
+
+@mixin anim-heart () {                              // Mixin pour le remplissage du coeur
+    .card__description-heart {
+        display: flex;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        .fa-solid.fa-heart { 
+            position: relative;
+            left: -24px;
+            opacity: 0;
+        }
+       &:hover {
+            .fa-regular.fa-heart {
+                opacity: 0;
+                transition: opacity 300ms ease-out;
+            }
+            .fa-solid.fa-heart {
+                opacity: 1;
+                transition: opacity 300ms ease-in;
+                background: linear-gradient($primary 0%, $secondary 100%);
+                background-clip: border-box;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+}

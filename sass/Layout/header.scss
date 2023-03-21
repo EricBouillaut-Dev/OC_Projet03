@@ -1,0 +1,52 @@
+header {
+    box-shadow: 0 5px 10px lightgrey;
+    h1 {
+        font-family : 'Shrikhand', cursive;
+        font-size: 1.78rem;
+        margin: 0;
+        padding: 0.8rem 0 0.4rem 0;
+        text-align: center;
+    }
+}
+
+.nav-bar {
+    text-align: center;
+    background-color: $ultralightgray;
+    &__search {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 0.3rem;
+        font-size: 1rem;
+        align-items: center;
+        background-color: $ultralightgray;
+        input {
+            border: none;
+            padding: 1rem;
+            font-size: 1rem;
+            width: 130px;
+            background-color: $ultralightgray;
+            &:focus {
+                outline-color: $darkgray;
+            }
+        }
+    }
+
+    &__btn {
+        p {
+            font-size: 1.2rem;
+            margin: 0;
+            margin-top: 1rem;
+            padding: 0 1rem;
+            flex-basis: 100%;
+        }
+        h2{
+            width: 70%;
+            margin: 2rem 0 0 0;
+        }
+        @include btn-style();
+    }
+    
+
+    
+}
