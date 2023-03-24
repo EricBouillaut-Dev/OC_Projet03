@@ -86,6 +86,22 @@ main{
     box-shadow: 0 2px 5px $darkgray;
     cursor: pointer;
     overflow: hidden;
+    @keyframes appear {
+        from{
+            transform: translateY(30px);
+            opacity: 0;
+        }
+        to{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+    animation: appear 1s both;
+    @for $i from 2 through 5{
+        &:nth-child(#{$i}){
+            animation-delay: (100ms * $i)-100;
+        }
+    }
     &__description{
         white-space: nowrap;
         overflow: hidden;
