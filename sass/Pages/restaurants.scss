@@ -1,0 +1,138 @@
+@import "../Utils/variables";
+@import "../Base/base";
+@import "../Utils/mixins";
+
+header {
+    display: flex;
+    .btn-retour{
+        display: flex;
+        align-items: center;
+        margin-left: 1.5rem;
+        i {
+            font-size: 1.5rem;
+            color: black;
+        }
+    }
+    h1 {
+        display: flex;
+        justify-content: center;
+        flex-basis: 100%;
+        font-family : 'Shrikhand', cursive;
+        font-size: 1.78rem;
+        margin: 0.8rem 3rem 0.4rem 0;
+        text-align: center;
+    }
+}
+
+main{
+    background-color: $ultralightgray;
+    img {
+        height: 300px;
+        object-fit: cover;
+        object-position: 50% 70%;
+        width: 100%;
+    }
+    .menu{
+        position: relative;
+        top: -4rem;
+        // padding-left: 1rem;
+        &__titre {
+            border-radius: 3rem 3rem 0 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $ultralightgray;
+            h1 {
+                font-family: 'Shrikhand', cursive;
+                font-size: 1.8rem;
+                margin: 2rem 0 1rem 1rem;
+            }
+            i {
+                display: flex;
+                font-size: 2rem;
+                margin-right: 3rem;
+            }
+            &--heart{
+                @include anim-heart ($heart-restaurants);
+            }
+        }
+        &__entrees, &__plats, &__desserts {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 0 1rem 0 1rem;
+        
+            h3 {
+                text-transform: uppercase;  
+                color: $grayblack;
+                font-weight: normal;
+                position: relative;
+                &::before {          
+                    position: absolute;
+                    top: 1.8rem;
+                    content: "";
+                    height: 3px;
+                    width: 50px;
+                    background-color: $tertiary;
+                }
+            }
+        }
+    }
+}
+.article {
+    display: flex;
+    background-color: white;
+    border-radius: 1rem;
+    box-shadow: 0 2px 5px $darkgray;
+    cursor: pointer;
+    overflow: hidden;
+    &__description{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        padding: 0.8rem;
+        h4{
+            overflow: hidden;
+            text-overflow:ellipsis;
+            font-size: 1.2rem;
+            margin: 0 0 0.2rem 0;
+        }
+        p{
+            overflow: hidden;
+            text-overflow:ellipsis;
+            font-size: 1rem;
+            margin: 0;
+        }
+    }
+    &__prix{
+        font-weight: bold;
+        font-size: 1rem;
+        margin-left: auto;
+        margin-right: 1rem;
+        display: flex;
+        align-items: flex-end;
+    }
+    &__check{
+        @include flex-center;
+        margin-right: -60px;
+        width: 60px;
+        background-color: $tertiary;
+        transition: margin-right 0.4s ease-in-out;
+        &::after{
+            content: '\f00c';
+            font-family: 'FontAwesome';
+            padding: 0.1rem;
+            border-radius: 50%;
+            color: $tertiary;
+            font-size: 0.9rem;
+            background-color: #fff;
+            transition: transform 0.4s ease-in-out;
+        }
+    }
+    &:hover &__check{
+        margin-right: 0;
+    }
+    &:hover &__check::after{
+        transform: rotate(360deg);
+    }
+}

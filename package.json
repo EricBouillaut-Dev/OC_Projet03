@@ -4,7 +4,7 @@
   "description": "P3 MyFood",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss:./css/style.css"
+    "sass": "sass --watch ./sass/main.scss:./css/style.css ./sass/Pages/restaurants.scss:./css/restaurants.css"
   },
   "author": "Eric Bouillaut",
   "license": "ISC"

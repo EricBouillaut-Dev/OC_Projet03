@@ -52,6 +52,7 @@ header h1 {
 .nav-bar__btn {
   display: flex;
   justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
   width: 100%;
   background-color: #F6F6F6;
@@ -70,6 +71,7 @@ header h1 {
 .nav-bar__btn label {
   display: flex;
   justify-content: center;
+  align-items: center;
   color: white;
   border-radius: 2rem;
   font-size: 1rem;
@@ -177,15 +179,21 @@ main .restaurants article .card__description .card__description-heart {
 }
 main .restaurants article .card__description .card__description-heart .fa-solid.fa-heart {
   opacity: 0;
+  transition: opacity 300ms ease-in;
+  background: linear-gradient(#9356dc 0%, #ff79da 100%);
+  background-clip: border-box;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 main .restaurants article .card__description .card__description-heart .fa-regular.fa-heart {
+  cursor: pointer;
   position: relative;
   left: 24px;
   z-index: 1;
+  transition: opacity 300ms ease-in-out;
 }
 main .restaurants article .card__description .card__description-heart .fa-regular.fa-heart:hover {
   opacity: 0;
-  transition: opacity 300ms ease-out;
 }
 main .restaurants article .card__description .card__description-heart .fa-regular.fa-heart:hover + .fa-solid.fa-heart {
   opacity: 1;
@@ -203,7 +211,7 @@ main .restaurants article .card a img {
   position: relative;
   width: 100%;
   object-fit: cover;
-  object-position: 0 60%;
+  object-position: 0 61%;
   max-height: 175px;
   border-radius: 1rem 1rem 0 0;
   padding-bottom: 1rem;

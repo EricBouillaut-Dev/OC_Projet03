@@ -60,9 +60,6 @@ main {
         article{
             display: flex;
             flex-direction: column;
-            
-            
-            
             .card {
                 // cursor: pointer;
                 position: relative;
@@ -83,7 +80,9 @@ main {
                             margin: 0 0 0.2rem 1rem;
                         }
                     }
-                    @include anim-heart;
+                    .card__description-heart {
+                        @include anim-heart ($heart-main);
+                    }
                 }
 
 
@@ -94,7 +93,7 @@ main {
                         position: relative;
                         width: 100%;
                         object-fit: cover;
-                        object-position: 0 60%;
+                        object-position: 0 61%;
                         max-height: 175px;
                         border-radius: 1rem 1rem 0 0;
                         padding-bottom: 1rem;
