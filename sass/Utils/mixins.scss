@@ -5,27 +5,35 @@
 }
 
 @mixin btn-style() {                
-    @include flex-center;
-    flex-wrap: wrap;
-    width: 100%;
-    background-color: $graywhite;
-    label {
-        @include flex-center;
+    // @include flex-center;
+    // flex-wrap: wrap;
+    // width: 100%;
+    // background-color: $graywhite;
+    // margin: 0;
+    // text-align: center;
+    // a {
+        // @include flex-center;
+
+        display: inline-block;
+        text-decoration: none;
+        // text-align: center;
         color: white;
         border-radius: 2rem;
         font-size: 1rem;
-        background: linear-gradient($secondary, $primary);
+        background: linear-gradient(to bottom right,$secondary, $primary);
         padding: 0.8rem 1.5rem 0.8rem 1.5rem;
-        margin: 2rem 0 3rem 0;
+        margin: 2rem 0 0 0;
         box-shadow: 0 3px 10px $darkgray;
-        transition: 100ms;
+        transition: 0.5s;
+        // transition: all 0.4s ease-in-out;
         &:hover {
             cursor: pointer;
             transform: scale(1.02);
             box-shadow: 0 3px 10px $secondary;
             transition: 0.5s;
+            // transition: all 0.4s ease-in-out;
         }
-    }
+    // }
 }
 @mixin gradiant-heart (){
     transition: opacity 300ms ease-in;
@@ -34,29 +42,41 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-@mixin anim-heart ($pixel) {
+@mixin anim-heart () {
     display: flex;
-    align-items: start;
-    justify-content: center;
+    width: 24px;
     font-size: 1.5rem;
-    padding-right: 0.5rem;
-    .fa-solid.fa-heart { 
-        opacity: 0;
-        @include gradiant-heart;
-    }
-    .fa-regular.fa-heart {
+    .fa-regular.fa-heart { 
+        opacity: 1;
         cursor: pointer;
-        position: relative;
-        left: $pixel;
         z-index: 1;
         transition: opacity 300ms ease-in-out;
         &:hover{
             opacity: 0;
             & + .fa-solid.fa-heart {
                 opacity: 1;
-                @include gradiant-heart;
             }
         }
     }
+    .fa-solid.fa-heart {
+        opacity: 0;
+        position: relative;
+        right: 24px;
+        transition: opacity 300ms ease-in-out;
+        @include gradiant-heart;
+    }
 }
 
+@mixin media-footer (){
+    padding: 1rem 0 2rem 0;
+    h1{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .footer-text{
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+
+}

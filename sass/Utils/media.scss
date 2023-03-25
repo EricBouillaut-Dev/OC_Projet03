@@ -35,15 +35,8 @@
         }
         
     }
+
     footer{
-        padding: 1rem 0 2rem 0;
-        h1{
-            font-size: 2rem;
-            text-align: center;
-        }
-        .footer-text{
-            flex-direction: row;
-            justify-content: space-evenly;
-        }
+        @include media-footer;
     }
 }

@@ -1,6 +1,7 @@
 @import "../Utils/variables";
 @import "../Base/base";
 @import "../Utils/mixins";
+@import "../Layout/footer";
 
 header {
     display: flex;
@@ -25,7 +26,8 @@ header {
 }
 
 main{
-    background-color: $ultralightgray;
+    background-color: $graywhite;
+    text-align: center;
     img {
         height: 300px;
         object-fit: cover;
@@ -35,50 +37,75 @@ main{
     .menu{
         position: relative;
         top: -4rem;
-        // padding-left: 1rem;
         &__titre {
             border-radius: 3rem 3rem 0 0;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            background-color: $ultralightgray;
+            background-color: $graywhite;
             h1 {
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
                 font-family: 'Shrikhand', cursive;
                 font-size: 1.8rem;
                 margin: 2rem 0 1rem 1rem;
-            }
-            i {
-                display: flex;
-                font-size: 2rem;
-                margin-right: 3rem;
-            }
+                @media (min-width: $tablette) {
+                    flex-basis: 100%;
+                }
+                }
             &--heart{
-                @include anim-heart ($heart-restaurants);
+                padding: 0.7rem 2rem 0 0;
+                @include anim-heart;
             }
         }
-        &__entrees, &__plats, &__desserts {
+        &__carte {
             display: flex;
             flex-direction: column;
+            flex-basis: 100%;
             gap: 1rem;
             margin: 0 1rem 0 1rem;
-        
+            @media (min-width: $tablette) {
+                width: 25%;
+            }
+    
             h3 {
+                text-align: left;
                 text-transform: uppercase;  
                 color: $grayblack;
                 font-weight: normal;
+                font-size: 1rem;
                 position: relative;
+                margin: 0.6rem 0 0.6rem 0;
                 &::before {          
                     position: absolute;
-                    top: 1.8rem;
+                    top: 1.75rem;
                     content: "";
                     height: 3px;
-                    width: 50px;
+                    width: 40px;
                     background-color: $tertiary;
                 }
             }
+
+        }
+        .bloc-menu{
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            padding-bottom: 1rem;
+        }
+        @media (min-width: $tablette) {
+            .bloc-menu{
+                flex-direction: row;
+            }
         }
     }
+    a {
+        @include btn-style();
+        padding: 0.8rem 3rem 0.8rem 3rem;
+    }
 }
+
 .article {
     display: flex;
     background-color: white;
@@ -97,6 +124,7 @@ main{
         }
     }
     animation: appear 1s both;
+
     @for $i from 2 through 5{
         &:nth-child(#{$i}){
             animation-delay: (100ms * $i)-100;
@@ -107,11 +135,13 @@ main{
         overflow: hidden;
         text-overflow:ellipsis;
         padding: 0.8rem;
+        text-align: left;
         h4{
             overflow: hidden;
             text-overflow:ellipsis;
             font-size: 1.2rem;
             margin: 0 0 0.2rem 0;
+            
         }
         p{
             overflow: hidden;
@@ -130,14 +160,16 @@ main{
     }
     &__check{
         @include flex-center;
+        box-sizing: border-box;
         margin-right: -60px;
         width: 60px;
         background-color: $tertiary;
+        padding: 0 1rem;
         transition: margin-right 0.4s ease-in-out;
         &::after{
             content: '\f00c';
             font-family: 'FontAwesome';
-            padding: 0.1rem;
+            padding: 0.2rem;
             border-radius: 50%;
             color: $tertiary;
             font-size: 0.9rem;
@@ -150,5 +182,10 @@ main{
     }
     &:hover &__check::after{
         transform: rotate(360deg);
+    }
+}
+@media (min-width: $tablette) {
+    footer{
+        @include media-footer;
     }
 }

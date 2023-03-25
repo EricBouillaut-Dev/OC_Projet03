@@ -21,6 +21,7 @@ main {
                 box-shadow: 0 3px 5px $darkgray;
                 font-size: 1rem;
                 font-weight: bold;
+                transition: all 1s ease;
                 span {
                     font-size: 0.8rem;
                     font-weight: normal;
@@ -34,13 +35,12 @@ main {
                 i {
                     margin: 0 1.5rem 0 0.5rem;
                     font-size: 1.2rem;
+                    transition: all 1s ease;
                 }
                 &:hover {
                     cursor: pointer;
                     background-color: $lightpurple;
                     box-shadow: 0 3px 5px $secondary;
-                    transition: 0.5s;
-                    transform: scale(1.02);
                     i {
                         color: $primary;
                     }
@@ -63,7 +63,7 @@ main {
             .card {
                 // cursor: pointer;
                 position: relative;
-                margin: 1rem;
+                margin: 0.5rem 1rem;
                 padding-bottom: 1rem;
                 display: flex;
                 flex-direction: column;
@@ -81,7 +81,8 @@ main {
                         }
                     }
                     .card__description-heart {
-                        @include anim-heart ($heart-main);
+                        padding-right: 0.5rem;
+                        @include anim-heart;
                     }
                 }
 
@@ -90,7 +91,6 @@ main {
                     text-decoration: none;
                     color: inherit;
                     img {
-                        position: relative;
                         width: 100%;
                         object-fit: cover;
                         object-position: 0 61%;
@@ -112,11 +112,6 @@ main {
                         height: 20px;
                     }
 
-                }
-                &:hover {
-                    box-shadow: 0 0 10px $primary;
-                    transform: scale(1.01);
-                    transition: 0.5s;
                 }
             }
         }        

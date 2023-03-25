@@ -3,8 +3,9 @@ body {
   box-sizing: border-box;
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
-  min-width: 400px;
-  max-width: 1600px;
+  min-width: 200px;
+  max-width: 1920px;
+  min-width: 200px;
 }
 
 .bold {
@@ -28,7 +29,6 @@ header h1 {
 
 .nav-bar {
   text-align: center;
-  background-color: #EAEAEA;
 }
 .nav-bar__search {
   display: flex;
@@ -50,38 +50,30 @@ header h1 {
   outline-color: darkgray;
 }
 .nav-bar__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  width: 100%;
-  background-color: #F6F6F6;
-}
-.nav-bar__btn p {
-  font-size: 1.2rem;
-  margin: 0;
-  margin-top: 1rem;
-  padding: 0 1rem;
-  flex-basis: 100%;
+  background-color: #F7F7F7;
+  padding-bottom: 3rem;
 }
 .nav-bar__btn h2 {
-  width: 70%;
-  margin: 2rem 0 0 0;
+  margin: 0;
+  padding: 2rem 4rem 0 4rem;
 }
-.nav-bar__btn label {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.nav-bar__btn p {
+  margin: 0;
+  padding: 1rem 1.5rem 0 1.5rem;
+}
+.nav-bar__btn a {
+  display: inline-block;
+  text-decoration: none;
   color: white;
   border-radius: 2rem;
   font-size: 1rem;
-  background: linear-gradient(#ff79da, #9356dc);
+  background: linear-gradient(to bottom right, #ff79da, #9356dc);
   padding: 0.8rem 1.5rem 0.8rem 1.5rem;
-  margin: 2rem 0 3rem 0;
+  margin: 2rem 0 0 0;
   box-shadow: 0 3px 10px darkgray;
-  transition: 100ms;
+  transition: 0.5s;
 }
-.nav-bar__btn label:hover {
+.nav-bar__btn a:hover {
   cursor: pointer;
   transform: scale(1.02);
   box-shadow: 0 3px 10px #ff79da;
@@ -105,12 +97,13 @@ main .menu ol {
 }
 main .menu ol li {
   display: flex;
-  background-color: #F6F6F6;
+  background-color: #F7F7F7;
   border-radius: 1rem;
   padding: 1.5rem 1.5rem 1.5rem 0;
   box-shadow: 0 3px 5px darkgray;
   font-size: 1rem;
   font-weight: bold;
+  transition: all 1s ease;
 }
 main .menu ol li span {
   font-size: 0.8rem;
@@ -125,20 +118,19 @@ main .menu ol li span {
 main .menu ol li i {
   margin: 0 1.5rem 0 0.5rem;
   font-size: 1.2rem;
+  transition: all 1s ease;
 }
 main .menu ol li:hover {
   cursor: pointer;
   background-color: #F5EDFF;
   box-shadow: 0 3px 5px #ff79da;
-  transition: 0.5s;
-  transform: scale(1.02);
 }
 main .menu ol li:hover i {
   color: #9356dc;
 }
 main .restaurants {
   padding-bottom: 4rem;
-  background-color: #F6F6F6;
+  background-color: #F7F7F7;
 }
 main .restaurants h2 {
   text-align: left;
@@ -151,7 +143,7 @@ main .restaurants article {
 }
 main .restaurants article .card {
   position: relative;
-  margin: 1rem;
+  margin: 0.5rem 1rem;
   padding-bottom: 1rem;
   display: flex;
   flex-direction: column;
@@ -171,24 +163,14 @@ main .restaurants article .card__description-text h3, main .restaurants article 
   margin: 0 0 0.2rem 1rem;
 }
 main .restaurants article .card__description .card__description-heart {
-  display: flex;
-  align-items: start;
-  justify-content: center;
-  font-size: 1.5rem;
   padding-right: 0.5rem;
-}
-main .restaurants article .card__description .card__description-heart .fa-solid.fa-heart {
-  opacity: 0;
-  transition: opacity 300ms ease-in;
-  background: linear-gradient(#9356dc 0%, #ff79da 100%);
-  background-clip: border-box;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  display: flex;
+  width: 24px;
+  font-size: 1.5rem;
 }
 main .restaurants article .card__description .card__description-heart .fa-regular.fa-heart {
+  opacity: 1;
   cursor: pointer;
-  position: relative;
-  left: 24px;
   z-index: 1;
   transition: opacity 300ms ease-in-out;
 }
@@ -197,6 +179,12 @@ main .restaurants article .card__description .card__description-heart .fa-regula
 }
 main .restaurants article .card__description .card__description-heart .fa-regular.fa-heart:hover + .fa-solid.fa-heart {
   opacity: 1;
+}
+main .restaurants article .card__description .card__description-heart .fa-solid.fa-heart {
+  opacity: 0;
+  position: relative;
+  right: 24px;
+  transition: opacity 300ms ease-in-out;
   transition: opacity 300ms ease-in;
   background: linear-gradient(#9356dc 0%, #ff79da 100%);
   background-clip: border-box;
@@ -208,7 +196,6 @@ main .restaurants article .card a {
   color: inherit;
 }
 main .restaurants article .card a img {
-  position: relative;
   width: 100%;
   object-fit: cover;
   object-position: 0 61%;
@@ -227,11 +214,6 @@ main .restaurants article .card a span {
   padding: 0.5rem;
   width: 80px;
   height: 20px;
-}
-main .restaurants article .card:hover {
-  box-shadow: 0 0 10px #9356dc;
-  transform: scale(1.01);
-  transition: 0.5s;
 }
 
 footer {
