@@ -85,7 +85,7 @@ main .menu__titre {
   align-items: center;
   background-color: #F7F7F7;
 }
-main .menu__titre h1 {
+main .menu__titre h2 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -94,7 +94,7 @@ main .menu__titre h1 {
   margin: 2rem 0 1rem 1rem;
 }
 @media (min-width: 768px) {
-  main .menu__titre h1 {
+  main .menu__titre h2 {
     flex-basis: 100%;
   }
 }
