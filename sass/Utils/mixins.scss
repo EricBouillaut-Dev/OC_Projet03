@@ -17,8 +17,8 @@
     transition: all 0.4s ease-in-out;
     &:hover {
         cursor: pointer;
-        // transform: scale(1.02);
-        box-shadow: 0 3px 10px $secondary;
+        box-shadow: 1px 3px 15px $secondary;
+        filter: brightness(110%);
         transition: all 0.4s ease-in-out;
     }
 }

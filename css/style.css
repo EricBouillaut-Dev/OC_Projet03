@@ -16,6 +16,77 @@ body {
   color: dimgray;
 }
 
+.loader {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: end-spin 3s ease forwards;
+}
+.loader__end {
+  width: 300px;
+  height: 250px;
+  border-radius: 50%;
+  background: conic-gradient(#99E2D0, #FF79DA, #9356DC, #99E2D0);
+  box-shadow: 0px 0px 150px -75px black;
+  border: 4px solid white;
+  animation: spin 2s ease-out forwards;
+  overflow: hidden;
+}
+.loader__end::before {
+  content: "";
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  height: 60%;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: inset 0px 0px 110px -70px black;
+  border: 2px solid white;
+}
+.loader__end::after {
+  content: "Ohmyfood";
+  font-family: "Shrikhand", cursive;
+  font-size: 3rem;
+  white-space: nowrap;
+  position: absolute;
+  animation: titre 2.3s ease-out;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0) scale(0);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+@keyframes end-spin {
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes titre {
+  0% {
+    left: -30%;
+  }
+  100% {
+    left: 50%;
+  }
+}
 header {
   box-shadow: 0 5px 10px lightgrey;
 }
@@ -75,61 +146,11 @@ header h1 {
 }
 .nav-bar__btn a:hover {
   cursor: pointer;
-  box-shadow: 0 3px 10px #ff79da;
+  box-shadow: 1px 3px 15px #ff79da;
+  filter: brightness(110%);
   transition: all 0.4s ease-in-out;
 }
 
-.loader {
-  position: fixed;
-  z-index: 10;
-  width: 100%;
-  height: 100vh;
-  pointer-events: none;
-  background-color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  animation: end-spin 3s ease forwards;
-}
-.loader__end {
-  width: 300px;
-  height: 350px;
-  border-radius: 50%;
-  background: conic-gradient(#99E2D0, #FF79DA, #9356DC, #99E2D0);
-  box-shadow: 0px 0px 150px -75px black;
-  border: 4px solid white;
-  animation: spin 2s ease-out forwards;
-}
-.loader__end::before {
-  content: "";
-  background-color: white;
-  position: absolute;
-  width: 60%;
-  height: 100%;
-  border-radius: 50%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: inset 0px 0px 110px -70px black;
-  border: 2px solid white;
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0) scale(0);
-  }
-  100% {
-    transform: rotate(360deg) scale(1);
-  }
-}
-@keyframes end-spin {
-  80% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 main .menu {
   margin-bottom: 2rem;
 }
