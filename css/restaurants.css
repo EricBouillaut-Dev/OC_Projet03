@@ -177,14 +177,13 @@ main a {
   padding: 0.8rem 1.5rem 0.8rem 1.5rem;
   margin: 2rem 0 0 0;
   box-shadow: 0 3px 10px darkgray;
-  transition: 0.5s;
+  transition: all 0.4s ease-in-out;
   padding: 0.8rem 3rem 0.8rem 3rem;
 }
 main a:hover {
   cursor: pointer;
-  transform: scale(1.02);
   box-shadow: 0 3px 10px #ff79da;
-  transition: 0.5s;
+  transition: all 0.4s ease-in-out;
 }
 
 .article {
