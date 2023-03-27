@@ -3,9 +3,9 @@ body {
   box-sizing: border-box;
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
-  min-width: 200px;
+  min-width: 350px;
   max-width: 1920px;
-  min-width: 200px;
+  min-width: 350px;
 }
 
 .bold {
@@ -74,6 +74,11 @@ main img {
   object-position: 50% 70%;
   width: 100%;
 }
+@media (min-width: 1024px) {
+  main img {
+    height: 500px;
+  }
+}
 main .menu {
   position: relative;
   top: -4rem;
@@ -96,6 +101,13 @@ main .menu__titre h2 {
 @media (min-width: 768px) {
   main .menu__titre h2 {
     flex-basis: 100%;
+    font-size: 2rem;
+  }
+}
+@media (min-width: 1024px) {
+  main .menu__titre h2 {
+    font-size: 2.5rem;
+    letter-spacing: 0.2rem;
   }
 }
 main .menu__titre--heart {
@@ -121,6 +133,7 @@ main .menu__titre--heart .fa-solid.fa-heart {
   position: relative;
   right: 24px;
   transition: opacity 300ms ease-in-out;
+  height: 24px;
   transition: opacity 300ms ease-in;
   background: linear-gradient(#9356dc 0%, #ff79da 100%);
   background-clip: border-box;

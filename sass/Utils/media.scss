@@ -35,8 +35,27 @@
         }
         
     }
-
     footer{
         @include media-footer;
+    }
+
+}
+@media (min-width: $desktop) {
+    main{
+        .menu{
+            h2{
+                font-size: 1.8rem;
+            }
+            ol {
+                li{
+                    font-size: 1.15rem;
+                }
+            }
+        }
+        .restaurants {
+            h2{
+                font-size: 2rem;
+            }
+        }
     }
 }

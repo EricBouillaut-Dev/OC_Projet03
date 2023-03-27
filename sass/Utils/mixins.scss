@@ -23,6 +23,7 @@
     }
 }
 @mixin gradiant-heart (){
+    height: 24px;
     transition: opacity 300ms ease-in;
     background: linear-gradient($primary 0%, $secondary 100%);
     background-clip: border-box;

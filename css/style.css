@@ -3,9 +3,9 @@ body {
   box-sizing: border-box;
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
-  min-width: 200px;
+  min-width: 350px;
   max-width: 1920px;
-  min-width: 200px;
+  min-width: 350px;
 }
 
 .bold {
@@ -57,7 +57,7 @@ body {
   font-size: 3rem;
   white-space: nowrap;
   position: absolute;
-  animation: titre 2.3s ease-out;
+  animation: titre 2.1s ease-out;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -256,6 +256,7 @@ main .restaurants article .card__description .card__description-heart .fa-solid.
   position: relative;
   right: 24px;
   transition: opacity 300ms ease-in-out;
+  height: 24px;
   transition: opacity 300ms ease-in;
   background: linear-gradient(#9356dc 0%, #ff79da 100%);
   background-clip: border-box;
@@ -349,6 +350,17 @@ footer .footer-text p {
   footer .footer-text {
     flex-direction: row;
     justify-content: space-evenly;
+  }
+}
+@media (min-width: 1024px) {
+  main .menu h2 {
+    font-size: 1.8rem;
+  }
+  main .menu ol li {
+    font-size: 1.15rem;
+  }
+  main .restaurants h2 {
+    font-size: 2rem;
   }
 }
 
