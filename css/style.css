@@ -185,12 +185,11 @@ main .menu ol li span {
 main .menu ol li i {
   margin: 0 1.5rem 0 0.5rem;
   font-size: 1.2rem;
-  transition: all 1s ease;
+  transition: all 300ms ease;
 }
 main .menu ol li:hover {
   cursor: pointer;
   background-color: #F5EDFF;
-  box-shadow: 0 3px 5px #ff79da;
 }
 main .menu ol li:hover i {
   color: #9356dc;
