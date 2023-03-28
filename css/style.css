@@ -1,19 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Shrikhand&display=swap");
-body {
+html {
   box-sizing: border-box;
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
   min-width: 350px;
   max-width: 1920px;
-  min-width: 350px;
 }
 
 .bold {
   font-weight: bold;
-}
-
-.gray {
-  color: dimgray;
 }
 
 .loader {
@@ -108,20 +103,20 @@ header h1 {
   margin-top: 0.3rem;
   font-size: 1rem;
   align-items: center;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
 }
 .nav-bar__search input {
   border: none;
   padding: 1rem;
   font-size: 1rem;
   width: 130px;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
 }
 .nav-bar__search input:focus {
-  outline-color: darkgray;
+  outline-color: #353535;
 }
 .nav-bar__btn {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   padding-bottom: 3rem;
 }
 .nav-bar__btn h2 {
@@ -131,6 +126,7 @@ header h1 {
 .nav-bar__btn p {
   margin: 0;
   padding: 1rem 1.5rem 0 1.5rem;
+  color: dimgray;
 }
 .nav-bar__btn a {
   display: inline-block;
@@ -141,7 +137,7 @@ header h1 {
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
   padding: 0.8rem 1.5rem 0.8rem 1.5rem;
   margin: 2rem 0 0 0;
-  box-shadow: 0 3px 10px darkgray;
+  box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.3);
   transition: all 0.4s ease-in-out;
 }
 .nav-bar__btn a:hover {
@@ -168,10 +164,10 @@ main .menu ol {
 }
 main .menu ol li {
   display: flex;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   border-radius: 1rem;
   padding: 1.5rem 1.5rem 1.5rem 0;
-  box-shadow: 0 3px 5px darkgray;
+  box-shadow: 0 3px 5px #eaeaea;
   font-size: 1rem;
   font-weight: bold;
   transition: all 1s ease;
@@ -201,7 +197,7 @@ main .menu ol li:hover i {
 }
 main .restaurants {
   padding-bottom: 4rem;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 main .restaurants h2 {
   text-align: left;
@@ -220,7 +216,7 @@ main .restaurants article .card {
   flex-direction: column;
   flex-basis: 45%;
   border-radius: 1rem;
-  box-shadow: 0 3px 8px darkgray;
+  box-shadow: 0 3px 8px #eaeaea;
 }
 main .restaurants article .card__description {
   display: flex;

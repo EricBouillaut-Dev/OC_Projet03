@@ -3,7 +3,6 @@
     justify-content: center;
     align-items: center;
 }
-
 @mixin btn-style() {                
     display: inline-block;
     text-decoration: none;
@@ -13,7 +12,7 @@
     background: linear-gradient(to bottom right,$secondary, $primary);
     padding: 0.8rem 1.5rem 0.8rem 1.5rem;
     margin: 2rem 0 0 0;
-    box-shadow: 0 3px 10px $darkgray;
+    box-shadow: 1px 3px 8px 0px rgba(0,0,0,0.3);
     transition: all 0.4s ease-in-out;
     &:hover {
         cursor: pointer;
@@ -54,7 +53,6 @@
         @include gradiant-heart;
     }
 }
-
 @mixin media-footer (){
     padding: 1rem 0 2rem 0;
     h1{
@@ -65,6 +63,4 @@
         flex-direction: row;
         justify-content: space-evenly;
     }
-
-
 }

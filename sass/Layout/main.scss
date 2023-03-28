@@ -1,5 +1,4 @@
 main {
-
     .menu {
         margin-bottom: 2rem;
         h2 {
@@ -15,7 +14,7 @@ main {
             justify-content: space-around;
             li {
                 display: flex;
-                background-color: $graywhite;
+                background-color: $lightgray;
                 border-radius: 1rem;
                 padding: 1.5rem 1.5rem 1.5rem 0;
                 box-shadow: 0 3px 5px $darkgray;
@@ -48,10 +47,9 @@ main {
             }
         }
     }
-
     .restaurants {
         padding-bottom: 4rem;
-        background-color: $graywhite;
+        background-color: $lightgray;
         h2 {
             text-align: left;
             margin: 4rem 0 0 1rem;
@@ -61,7 +59,6 @@ main {
             display: flex;
             flex-direction: column;
             .card {
-                // cursor: pointer;
                 position: relative;
                 margin: 0.5rem 1rem;
                 padding-bottom: 1rem;
@@ -85,8 +82,6 @@ main {
                         @include anim-heart;
                     }
                 }
-
-
                 a{
                     text-decoration: none;
                     color: inherit;
@@ -111,10 +106,8 @@ main {
                         width: 80px;
                         height: 20px;
                     }
-
                 }
             }
         }        
     }
 }
-

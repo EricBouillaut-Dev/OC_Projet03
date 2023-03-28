@@ -1,19 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400&family=Shrikhand&display=swap");
-body {
+html {
   box-sizing: border-box;
   margin: 0 auto;
   font-family: "Roboto", sans-serif;
   min-width: 350px;
   max-width: 1920px;
-  min-width: 350px;
 }
 
 .bold {
   font-weight: bold;
-}
-
-.gray {
-  color: dimgray;
 }
 
 footer {
@@ -65,7 +60,7 @@ header h1 {
 }
 
 main {
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
   text-align: center;
 }
 main img {
@@ -88,7 +83,7 @@ main .menu__titre {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #F7F7F7;
+  background-color: #f7f7f7;
 }
 main .menu__titre h2 {
   overflow: hidden;
@@ -189,7 +184,7 @@ main a {
   background: linear-gradient(to bottom right, #ff79da, #9356dc);
   padding: 0.8rem 1.5rem 0.8rem 1.5rem;
   margin: 2rem 0 0 0;
-  box-shadow: 0 3px 10px darkgray;
+  box-shadow: 1px 3px 8px 0px rgba(0, 0, 0, 0.3);
   transition: all 0.4s ease-in-out;
   padding: 0.8rem 3rem 0.8rem 3rem;
 }
@@ -204,12 +199,12 @@ main a:hover {
   display: flex;
   background-color: white;
   border-radius: 1rem;
-  box-shadow: 0 2px 5px darkgray;
+  box-shadow: 0 2px 5px #eaeaea;
   cursor: pointer;
   overflow: hidden;
-  animation: appear 1s both;
+  animation: move-up 1s both;
 }
-@keyframes appear {
+@keyframes move-up {
   from {
     transform: translateY(30px);
     opacity: 0;

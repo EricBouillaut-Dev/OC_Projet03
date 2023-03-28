@@ -8,31 +8,27 @@ header {
         text-align: center;
     }
 }
-
 .nav-bar {
     text-align: center;
     &__search {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         margin-top: 0.3rem;
         font-size: 1rem;
         align-items: center;
-        background-color: $ultralightgray;
+        background-color: $darkgray;
         input {
             border: none;
             padding: 1rem;
             font-size: 1rem;
             width: 130px;
-            background-color: $ultralightgray;
+            background-color: $darkgray;
             &:focus {
-                outline-color: $darkgray;
+                outline-color: $grayblack;
             }
         }
     }
-
     &__btn {
-        background-color: $graywhite;
+        background-color: $lightgray;
         h2{
             margin: 0;
             padding: 2rem 4rem 0 4rem;
@@ -40,6 +36,7 @@ header {
         p {
             margin: 0;
             padding: 1rem 1.5rem 0 1.5rem;
+            color: dimgray;
         }
         a {
             @include btn-style();
@@ -47,4 +44,3 @@ header {
         padding-bottom: 3rem;
     }
 }
-

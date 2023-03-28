@@ -12,8 +12,6 @@
                 justify-content: space-evenly;
                 align-items: flex-start;
             }
-        
-    
         }
         .restaurants {
             padding: 0 0 2rem 0;
@@ -33,7 +31,6 @@
                 }
             }
         }
-        
     }
     footer{
         @include media-footer;
