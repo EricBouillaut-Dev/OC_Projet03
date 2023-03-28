@@ -29,6 +29,9 @@ footer a {
 footer i {
   padding-right: 5px;
 }
+footer p {
+  cursor: pointer;
+}
 footer .footer-text {
   display: flex;
   flex-direction: column;
