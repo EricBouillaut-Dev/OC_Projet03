@@ -70,13 +70,13 @@ main {
                     display: flex;
                     justify-content: space-between;
                     padding-right: 15px;
-                    &-text {
+                    &--text {
                         width: 85%;
                         h3, p {
                             margin: 0 0 0.2rem 1rem;
                         }
                     }
-                    .card__description-heart {
+                    &--heart {
                         padding-right: 0.5rem;
                         @include anim-heart;
                     }
