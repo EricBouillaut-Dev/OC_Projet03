@@ -132,7 +132,6 @@ main .menu__titre--heart .fa-solid.fa-heart {
   right: 24px;
   transition: opacity 300ms ease-in-out;
   height: 24px;
-  transition: opacity 300ms ease-in;
   background: linear-gradient(#9356dc 0%, #ff79da 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
@@ -231,8 +230,8 @@ main a:hover {
 }
 .article__description {
   white-space: nowrap;
-  overflow: hidden;
   text-overflow: ellipsis;
+  overflow: hidden;
   padding: 0.8rem;
   text-align: left;
 }

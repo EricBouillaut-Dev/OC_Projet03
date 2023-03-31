@@ -222,37 +222,36 @@ main .restaurants article .card__description {
   justify-content: space-between;
   padding-right: 15px;
 }
-main .restaurants article .card__description-text {
+main .restaurants article .card__description--text {
   width: 85%;
 }
-main .restaurants article .card__description-text h3, main .restaurants article .card__description-text p {
+main .restaurants article .card__description--text h3, main .restaurants article .card__description--text p {
   margin: 0 0 0.2rem 1rem;
 }
-main .restaurants article .card__description .card__description-heart {
+main .restaurants article .card__description--heart {
   padding-right: 0.5rem;
   display: flex;
   width: 24px;
   font-size: 1.5rem;
 }
-main .restaurants article .card__description .card__description-heart .fa-regular.fa-heart {
+main .restaurants article .card__description--heart .fa-regular.fa-heart {
   opacity: 1;
   cursor: pointer;
   z-index: 1;
   transition: opacity 300ms ease-in-out;
 }
-main .restaurants article .card__description .card__description-heart .fa-regular.fa-heart:hover {
+main .restaurants article .card__description--heart .fa-regular.fa-heart:hover {
   opacity: 0;
 }
-main .restaurants article .card__description .card__description-heart .fa-regular.fa-heart:hover + .fa-solid.fa-heart {
+main .restaurants article .card__description--heart .fa-regular.fa-heart:hover + .fa-solid.fa-heart {
   opacity: 1;
 }
-main .restaurants article .card__description .card__description-heart .fa-solid.fa-heart {
+main .restaurants article .card__description--heart .fa-solid.fa-heart {
   opacity: 0;
   position: relative;
   right: 24px;
   transition: opacity 300ms ease-in-out;
   height: 24px;
-  transition: opacity 300ms ease-in;
   background: linear-gradient(#9356dc 0%, #ff79da 100%);
   background-clip: border-box;
   -webkit-background-clip: text;
